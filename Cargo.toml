@@ -1,0 +1,21 @@
+[package]
+name = "rhedge"
+version = "0.1.0"
+edition = "2024"
+authors = ["ChrisZzz <chrisz2zz@duck.com>"]
+description = "A hedged request library that sends redundant HTTP requests to reduce tail latency"
+documentation = "https://docs.rs/rhedge"
+readme = "README.md"
+keywords = ["http", "hedge", "latency", "reqwest", "tail-at-scale"]
+categories = ["web-programming::http-client", "network-programming"]
+license = "MIT"
+repository = "https://github.com/chrisz2zz/rhedge"
+
+[dependencies]
+bytes = "1.11.1"
+http = "1.4.0"
+reqwest = {version = "0.13.2", default-features = false, features = ["rustls"]}
+futures = "0.3"
+tdigest = "0.2.3"
+tokio = {version = "1.52.1", features = ["time", "rt", "macros", "rt-multi-thread"]}
+
